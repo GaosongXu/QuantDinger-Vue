@@ -1,13 +1,20 @@
 # QuantDinger Frontend — multi-arch image published to GHCR.
 #
-# Stage 1: build the Vue 2 SPA with vue-cli.
-# Stage 2: serve the static dist via nginx, with BACKEND_URL injected at
-# container start by the official image's envsubst step.
+# Stage 1 (builder) is pinned to --platform=$BUILDPLATFORM so the Vue build
+# runs once natively on the host (typically linux/amd64 on GitHub Actions),
+# NOT twice with the arm64 manifest entry forced through QEMU emulation
+# (~5–10× slower). The build output (/app/dist) is pure static JS/CSS,
+# byte-identical across architectures; the nginx stage just COPYs those
+# files into each target arch's base image.
+#
+# Stage 2 (nginx) runs once per --platform target listed by buildx, but
+# does no compilation — only file copies and a small apk add — so the
+# arm64 manifest entry is cheap.
 
 ARG NODE_IMAGE=node:18-alpine
 ARG NGINX_IMAGE=nginx:1.25-alpine
 
-FROM ${NODE_IMAGE} AS builder
+FROM --platform=$BUILDPLATFORM ${NODE_IMAGE} AS builder
 WORKDIR /app
 
 # git is needed by git-revision-webpack-plugin at build time.

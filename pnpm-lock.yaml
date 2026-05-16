@@ -110,22 +110,22 @@ importers:
         version: 1.4.0
       '@vue/cli-plugin-babel':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(core-js@3.49.0)(encoding@0.1.13)(postcss@8.5.14)(vue@2.7.16)
+        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(core-js@3.49.0)(encoding@0.1.13)(postcss@8.5.14)(vue@2.7.16)
       '@vue/cli-plugin-eslint':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(eslint@7.32.0)(postcss@8.5.14)
+        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(eslint@7.32.0)(postcss@8.5.14)
       '@vue/cli-plugin-router':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)
+        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)
       '@vue/cli-plugin-unit-jest':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(jest@27.5.1)
+        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(jest@27.5.1)
       '@vue/cli-plugin-vuex':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))
+        version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))
       '@vue/cli-service':
         specifier: ~5.0.8
-        version: 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+        version: 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
       '@vue/eslint-config-standard':
         specifier: ^4.0.0
         version: 4.0.0(eslint@7.32.0)
@@ -161,7 +161,7 @@ importers:
         version: 3.13.1
       less-loader:
         specifier: ^5.0.0
-        version: 5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+        version: 5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14))
       postcss:
         specifier: ^8.3.5
         version: 8.5.14
@@ -195,6 +195,9 @@ importers:
       vue-svg-loader:
         specifier: 0.16.0
         version: 0.16.0(vue-template-compiler@2.7.16)
+      webpack:
+        specifier: ^5.106.2
+        version: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
       webpack-theme-color-replacer:
         specifier: ^1.3.26
         version: 1.5.7
@@ -7562,7 +7565,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 1.8.6
 
-  '@soda/friendly-errors-webpack-plugin@1.8.1(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))':
+  '@soda/friendly-errors-webpack-plugin@1.8.1(webpack@5.106.2(postcss@8.5.14))':
     dependencies:
       chalk: 3.0.0
       error-stack-parser: 2.1.4
@@ -7919,14 +7922,14 @@ snapshots:
 
   '@vue/cli-overlay@5.0.9': {}
 
-  '@vue/cli-plugin-babel@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(core-js@3.49.0)(encoding@0.1.13)(postcss@8.5.14)(vue@2.7.16)':
+  '@vue/cli-plugin-babel@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(core-js@3.49.0)(encoding@0.1.13)(postcss@8.5.14)(vue@2.7.16)':
     dependencies:
       '@babel/core': 7.29.0
       '@vue/babel-preset-app': 5.0.9(@babel/core@7.29.0)(core-js@3.49.0)(vue@2.7.16)
-      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
       '@vue/cli-shared-utils': 5.0.9(encoding@0.1.13)
       babel-loader: 8.4.1(@babel/core@7.29.0)(webpack@5.106.2(postcss@8.5.14))
-      thread-loader: 3.0.4(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      thread-loader: 3.0.4(webpack@5.106.2(postcss@8.5.14))
       webpack: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
     transitivePeerDependencies:
       - '@minify-html/node'
@@ -7947,9 +7950,9 @@ snapshots:
       - vue
       - webpack-cli
 
-  '@vue/cli-plugin-eslint@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(eslint@7.32.0)(postcss@8.5.14)':
+  '@vue/cli-plugin-eslint@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(eslint@7.32.0)(postcss@8.5.14)':
     dependencies:
-      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
       '@vue/cli-shared-utils': 5.0.9(encoding@0.1.13)
       eslint: 7.32.0
       eslint-webpack-plugin: 3.2.0(eslint@7.32.0)(webpack@5.106.2(postcss@8.5.14))
@@ -7972,19 +7975,19 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@vue/cli-plugin-router@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)':
+  '@vue/cli-plugin-router@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)':
     dependencies:
-      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
       '@vue/cli-shared-utils': 5.0.9(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
 
-  '@vue/cli-plugin-unit-jest@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(jest@27.5.1)':
+  '@vue/cli-plugin-unit-jest@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)(jest@27.5.1)':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-modules-commonjs': 7.28.6(@babel/core@7.29.0)
       '@types/jest': 27.5.2
-      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
       '@vue/cli-shared-utils': 5.0.9(encoding@0.1.13)
       babel-jest: 27.5.1(@babel/core@7.29.0)
       deepmerge: 4.3.1
@@ -7996,22 +7999,22 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vue/cli-plugin-vuex@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))':
+  '@vue/cli-plugin-vuex@5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))':
     dependencies:
-      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
+      '@vue/cli-service': 5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)
 
-  '@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)':
+  '@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1)':
     dependencies:
       '@babel/helper-compilation-targets': 7.28.6
-      '@soda/friendly-errors-webpack-plugin': 1.8.1(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      '@soda/friendly-errors-webpack-plugin': 1.8.1(webpack@5.106.2(postcss@8.5.14))
       '@soda/get-current-script': 1.0.2
       '@types/minimist': 1.2.5
       '@vue/cli-overlay': 5.0.9
-      '@vue/cli-plugin-router': 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)
-      '@vue/cli-plugin-vuex': 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))
+      '@vue/cli-plugin-router': 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))(encoding@0.1.13)
+      '@vue/cli-plugin-vuex': 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.34)(encoding@0.1.13)(less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.4.1))
       '@vue/cli-shared-utils': 5.0.9(encoding@0.1.13)
       '@vue/component-compiler-utils': 3.3.0(lodash@4.18.1)
-      '@vue/vue-loader-v15': vue-loader@15.11.1(@vue/compiler-sfc@3.5.34)(css-loader@6.11.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      '@vue/vue-loader-v15': vue-loader@15.11.1(@vue/compiler-sfc@3.5.34)(css-loader@6.11.0(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.106.2(postcss@8.5.14))
       '@vue/web-component-wrapper': 1.3.0
       acorn: 8.16.0
       acorn-walk: 8.3.5
@@ -8022,9 +8025,9 @@ snapshots:
       cli-highlight: 2.1.11
       clipboardy: 2.3.0
       cliui: 7.0.4
-      copy-webpack-plugin: 9.1.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
-      css-loader: 6.11.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
-      css-minimizer-webpack-plugin: 3.4.1(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      copy-webpack-plugin: 9.1.0(webpack@5.106.2(postcss@8.5.14))
+      css-loader: 6.11.0(webpack@5.106.2(postcss@8.5.14))
+      css-minimizer-webpack-plugin: 3.4.1(webpack@5.106.2(postcss@8.5.14))
       cssnano: 5.1.15(postcss@8.5.14)
       debug: 4.4.3
       default-gateway: 6.0.3
@@ -8033,32 +8036,32 @@ snapshots:
       fs-extra: 9.1.0
       globby: 11.1.0
       hash-sum: 2.0.0
-      html-webpack-plugin: 5.6.7(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      html-webpack-plugin: 5.6.7(webpack@5.106.2(postcss@8.5.14))
       is-file-esm: 1.0.0
       launch-editor-middleware: 2.13.2
       lodash.defaultsdeep: 4.6.1
       lodash.mapvalues: 4.6.0
-      mini-css-extract-plugin: 2.10.2(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      mini-css-extract-plugin: 2.10.2(webpack@5.106.2(postcss@8.5.14))
       minimist: 1.2.8
       module-alias: 2.3.4
       portfinder: 1.0.38
       postcss: 8.5.14
-      postcss-loader: 6.2.1(postcss@8.5.14)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
-      progress-webpack-plugin: 1.0.16(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      postcss-loader: 6.2.1(postcss@8.5.14)(webpack@5.106.2(postcss@8.5.14))
+      progress-webpack-plugin: 1.0.16(webpack@5.106.2(postcss@8.5.14))
       ssri: 8.0.1
-      terser-webpack-plugin: 5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
-      thread-loader: 3.0.4(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
-      vue-loader: 17.4.2(@vue/compiler-sfc@3.5.34)(vue@2.7.16)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      terser-webpack-plugin: 5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(postcss@8.5.14))
+      thread-loader: 3.0.4(webpack@5.106.2(postcss@8.5.14))
+      vue-loader: 17.4.2(@vue/compiler-sfc@3.5.34)(vue@2.7.16)(webpack@5.106.2(postcss@8.5.14))
       vue-style-loader: 4.1.3
       webpack: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
       webpack-bundle-analyzer: 4.10.2
       webpack-chain: 6.5.1
-      webpack-dev-server: 4.15.2(debug@4.4.3)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      webpack-dev-server: 4.15.2(debug@4.4.3)(webpack@5.106.2(postcss@8.5.14))
       webpack-merge: 5.10.0
       webpack-virtual-modules: 0.4.6
       whatwg-fetch: 3.6.20
     optionalDependencies:
-      less-loader: 5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      less-loader: 5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14))
       vue-template-compiler: 2.7.16
       webpack-sources: 3.4.1
     transitivePeerDependencies:
@@ -9107,7 +9110,7 @@ snapshots:
     dependencies:
       toggle-selection: 1.0.6
 
-  copy-webpack-plugin@9.1.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  copy-webpack-plugin@9.1.0(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       fast-glob: 3.3.3
       glob-parent: 6.0.2
@@ -9165,7 +9168,7 @@ snapshots:
 
   css-functions-list@3.3.3: {}
 
-  css-loader@6.11.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  css-loader@6.11.0(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.14)
       postcss: 8.5.14
@@ -9178,7 +9181,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
 
-  css-minimizer-webpack-plugin@3.4.1(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  css-minimizer-webpack-plugin@3.4.1(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       cssnano: 5.1.15(postcss@8.5.14)
       jest-worker: 27.5.1
@@ -10365,7 +10368,7 @@ snapshots:
 
   html-tags@3.3.1: {}
 
-  html-webpack-plugin@5.6.7(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  html-webpack-plugin@5.6.7(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
@@ -11281,7 +11284,7 @@ snapshots:
 
   lazy-cache@1.0.4: {}
 
-  less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  less-loader@5.0.0(less@3.13.1)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       clone: 2.1.2
       less: 3.13.1
@@ -11498,7 +11501,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  mini-css-extract-plugin@2.10.2(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  mini-css-extract-plugin@2.10.2(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       schema-utils: 4.3.3
       tapable: 2.3.3
@@ -11924,7 +11927,7 @@ snapshots:
     dependencies:
       postcss: 8.5.14
 
-  postcss-loader@6.2.1(postcss@8.5.14)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  postcss-loader@6.2.1(postcss@8.5.14)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       cosmiconfig: 7.1.0
       klona: 2.0.6
@@ -12131,7 +12134,7 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  progress-webpack-plugin@1.0.16(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  progress-webpack-plugin@1.0.16(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       chalk: 2.4.2
       figures: 2.0.0
@@ -12957,7 +12960,7 @@ snapshots:
       ansi-escapes: 4.3.2
       supports-hyperlinks: 2.3.0
 
-  terser-webpack-plugin@5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  terser-webpack-plugin@5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -12991,7 +12994,7 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
-  thread-loader@3.0.4(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  thread-loader@3.0.4(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       json-parse-better-errors: 1.0.2
       loader-runner: 4.3.2
@@ -13251,10 +13254,10 @@ snapshots:
     dependencies:
       vue: 2.7.16
 
-  vue-loader@15.11.1(@vue/compiler-sfc@3.5.34)(css-loader@6.11.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  vue-loader@15.11.1(@vue/compiler-sfc@3.5.34)(css-loader@6.11.0(webpack@5.106.2(postcss@8.5.14)))(lodash@4.18.1)(vue-template-compiler@2.7.16)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       '@vue/component-compiler-utils': 3.3.0(lodash@4.18.1)
-      css-loader: 6.11.0(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      css-loader: 6.11.0(webpack@5.106.2(postcss@8.5.14))
       hash-sum: 1.0.2
       loader-utils: 1.4.2
       vue-hot-reload-api: 2.3.4
@@ -13318,7 +13321,7 @@ snapshots:
       - walrus
       - whiskers
 
-  vue-loader@17.4.2(@vue/compiler-sfc@3.5.34)(vue@2.7.16)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  vue-loader@17.4.2(@vue/compiler-sfc@3.5.34)(vue@2.7.16)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       chalk: 4.1.2
       hash-sum: 2.0.0
@@ -13460,7 +13463,7 @@ snapshots:
       deepmerge: 1.5.2
       javascript-stringify: 2.1.0
 
-  webpack-dev-middleware@5.3.4(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  webpack-dev-middleware@5.3.4(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -13469,7 +13472,7 @@ snapshots:
       schema-utils: 4.3.3
       webpack: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
 
-  webpack-dev-server@4.15.2(debug@4.4.3)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)):
+  webpack-dev-server@4.15.2(debug@4.4.3)(webpack@5.106.2(postcss@8.5.14)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -13499,7 +13502,7 @@ snapshots:
       serve-index: 1.9.2
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 5.3.4(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      webpack-dev-middleware: 5.3.4(webpack@5.106.2(postcss@8.5.14))
       ws: 8.20.1
     optionalDependencies:
       webpack: 5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)
@@ -13544,7 +13547,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.3
-      terser-webpack-plugin: 5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14))
+      terser-webpack-plugin: 5.6.0(cssnano@5.1.15(postcss@8.5.14))(postcss@8.5.14)(webpack@5.106.2(postcss@8.5.14))
       watchpack: 2.5.1
       webpack-sources: 3.4.1
     transitivePeerDependencies:
