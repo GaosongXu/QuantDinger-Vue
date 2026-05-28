@@ -121,23 +121,25 @@
 
           <!-- Direction Toggle -->
           <div class="qt-section">
-            <div class="qt-direction-toggle">
+            <div class="qt-direction-toggle" :class="{ 'qt-direction-toggle--spot': !isSwapMode }">
               <div
                 class="qt-dir-btn qt-dir-long"
-                :class="{ active: side === 'buy' }"
+                :class="{ active: side === 'buy', 'qt-dir-btn--solo': !isSwapMode }"
                 @click="setTradeSide('buy')"
               >
-                <a-icon type="arrow-up" /> {{ $t('quickTrade.long') }}
+                <a-icon type="arrow-up" />
+                {{ isSwapMode ? $t('quickTrade.long') : $t('quickTrade.buySpot') }}
               </div>
               <div
+                v-if="isSwapMode"
                 class="qt-dir-btn qt-dir-short"
-                :class="{ active: side === 'sell', 'qt-dir-disabled': !isSwapMode }"
+                :class="{ active: side === 'sell' }"
                 @click="setTradeSide('sell')"
               >
                 <a-icon type="arrow-down" /> {{ $t('quickTrade.short') }}
               </div>
             </div>
-            <div v-if="!isSwapMode" class="qt-hint-text qt-hint-inline">{{ $t('quickTrade.shortDisabledSpot') }}</div>
+            <div v-if="!isSwapMode" class="qt-hint-text qt-hint-inline">{{ $t('quickTrade.spotBuyOnlyHint') }}</div>
           </div>
 
           <!-- Order Type -->
@@ -285,7 +287,9 @@
               :class="[side === 'buy' ? 'qt-btn-long' : 'qt-btn-short']"
             >
               <a-icon :type="side === 'buy' ? 'arrow-up' : 'arrow-down'" />
-              {{ side === 'buy' ? $t('quickTrade.buyLong') : $t('quickTrade.sellShort') }}
+              {{ isSwapMode
+                ? (side === 'buy' ? $t('quickTrade.buyLong') : $t('quickTrade.sellShort'))
+                : $t('quickTrade.buySpot') }}
               {{ symbol }}
             </a-button>
           </div>
@@ -316,7 +320,9 @@
                 <div class="qt-pos-row">
                   <span>{{ $t('quickTrade.side') }}</span>
                   <a-tag :color="pos.side === 'long' ? '#52c41a' : '#f5222d'" size="small">
-                    {{ pos.side === 'long' ? $t('quickTrade.long') : $t('quickTrade.short') }}
+                    {{ pos.side === 'long'
+                      ? (isSwapMode ? $t('quickTrade.long') : $t('quickTrade.spotHold'))
+                      : $t('quickTrade.short') }}
                   </a-tag>
                 </div>
                 <div class="qt-pos-row">
@@ -350,7 +356,7 @@
                   :loading="closingPositionSide === pos.side"
                   style="margin-top: 8px;"
                 >
-                  {{ $t('quickTrade.closePosition') }}
+                  {{ isSwapMode ? $t('quickTrade.closePosition') : $t('quickTrade.sellSpot') }}
                 </a-button>
               </div>
             </template>
@@ -1767,6 +1773,11 @@ export default {
   opacity: 0.42;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.qt-direction-toggle--spot .qt-dir-btn--solo {
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
 .qt-empty-icon {
