@@ -16,7 +16,7 @@ import request from '@/utils/request'
  *   broker.<id>.quote(symbol, params)
  *
  * Per-user multi-tenancy is handled server-side via BrokerSessionRegistry,
- * so callers do not pass a user id — the auth token determines isolation.
+ * so callers do not pass a user id — local runtime context determines isolation.
  */
 
 const ENDPOINTS = {

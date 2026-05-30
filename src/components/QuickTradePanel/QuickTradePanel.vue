@@ -83,8 +83,8 @@
                 <a-icon type="plus-circle" style="margin-right: 4px;" />{{ $t('quickTrade.addAccountInline') }}
               </a>
               <span class="qt-manage-sep">·</span>
-              <router-link to="/profile?tab=exchange">
-                <a-icon type="setting" style="margin-right: 4px;" />{{ $t('profile.exchange.goToManage') }}
+              <router-link to="/broker-accounts">
+                <a-icon type="setting" style="margin-right: 4px;" />{{ $t('menu.dashboard.brokerAccounts') }}
               </router-link>
             </div>
             <!-- 合约 + 现货余额（与当前交易模式联动高亮） -->
@@ -416,7 +416,7 @@ import { formatExchangeCredentialLabel } from '@/utils/exchangeCredential'
 import ExchangeAccountModal from '@/components/ExchangeAccountModal/ExchangeAccountModal.vue'
 import { placeQuickOrder, getQuickTradeBalance, getQuickTradePosition, getQuickTradeHistory, closeQuickTradePosition } from '@/api/quick-trade'
 import { searchSymbols, getWatchlist } from '@/api/market'
-import { getUserInfo } from '@/api/login'
+import { getUserInfo } from '@/api/local-user'
 import request from '@/utils/request'
 
 export default {

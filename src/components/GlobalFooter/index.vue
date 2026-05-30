@@ -7,14 +7,14 @@
           :href="brandConfig.legal.user_agreement_url"
           target="_blank"
           rel="noopener noreferrer"
-        >{{ $t('user.login.legal.title') }} {{ brandConfig.copyright }}</a>
-        <a v-else @click="showLegal = true" style="cursor: pointer;">{{ $t('user.login.legal.title') }} {{ brandConfig.copyright }}</a>
+        >{{ legalTitle }} {{ brandConfig.copyright }}</a>
+        <a v-else @click="showLegal = true" style="cursor: pointer;">{{ legalTitle }} {{ brandConfig.copyright }}</a>
       </template>
     </global-footer>
 
-    <a-modal :visible="showLegal" :title="$t('user.login.legal.title')" :footer="null" @cancel="showLegal = false">
+    <a-modal :visible="showLegal" :title="legalTitle" :footer="null" @cancel="showLegal = false">
       <div :class="['legal-content', { 'legal-content-dark': isDarkTheme }]">
-        {{ (brandConfig.legal && brandConfig.legal.user_agreement_text) || $t('user.login.legal.content') }}
+        {{ legalContent }}
       </div>
       <div style="margin-top: 12px; text-align: right;">
         <a-button type="primary" @click="showLegal = false">OK</a-button>
@@ -51,6 +51,12 @@ export default {
         'footer-wrapper': true,
         'footer-wrapper-dark': this.isDarkTheme
       }
+    },
+    legalTitle () {
+      return 'User Agreement'
+    },
+    legalContent () {
+      return (this.brandConfig.legal && this.brandConfig.legal.user_agreement_text) || 'User agreement content unavailable.'
     }
   }
 }

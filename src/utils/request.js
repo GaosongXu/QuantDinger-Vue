@@ -3,16 +3,13 @@ import axios from 'axios'
 import storage from 'store'
 import notification from 'ant-design-vue/es/notification'
 import { VueAxios } from './axios'
-import { ACCESS_TOKEN, USER_INFO, USER_ROLES } from '@/store/mutation-types'
+import { ACCESS_TOKEN } from '@/store/mutation-types'
 import i18n from '@/locales'
 
 // PHPSESSID 存储键名
 const PHPSESSID_KEY = 'PHPSESSID'
 // Locale storage key used by vue-i18n (see src/locales/index.js)
 const LOCALE_KEY = 'lang'
-
-// Prevent multiple concurrent 401 redirects
-let isRedirectingToLogin = false
 
 /**
  * 获取 token，处理 token 可能是字符串或对象的情况
@@ -72,7 +69,7 @@ const errorHandler = (error) => {
       // NOTE: this notification used to be labelled "(Demo Mode) / Read-only in
       // demo mode", which was misleading: the backend returns 403 for many
       // distinct reasons (permission denied, IBKR/MT5 disabled by env, market
-      // not on whitelist, billing-gated route, ...). Always show the backend
+      // not on whitelist, feature-gated route, ...). Always show the backend
       // msg as the description so users see the real cause.
       notification.error({
         message: tt('request.forbiddenTitle', 'Operation not allowed'),
@@ -80,31 +77,13 @@ const errorHandler = (error) => {
           tt('request.forbiddenDesc', 'You do not have permission to perform this action.')
       })
     }
-    if (error.response.status === 401 && !(data.result && data.result.isLogin)) {
-      // Token invalid/expired: MUST clear local auth state, otherwise route guard will
-      // detect a stale token and immediately bounce user away from login page.
-      if (!isRedirectingToLogin) {
-        isRedirectingToLogin = true
-        try {
-          storage.remove(ACCESS_TOKEN)
-          storage.remove(USER_INFO)
-          storage.remove(USER_ROLES)
-          storage.remove(PHPSESSID_KEY)
-        } catch (e) {}
-
-        notification.error({
-          message: tt('request.unauthorizedTitle', 'Unauthorized'),
-          description: data.msg || data.message ||
-            tt('request.unauthorizedDesc', 'Token invalid or expired, please login again.')
-        })
-
-        // 项目使用 hash 模式，需要跳转到 /#/user/login
-        const curHash = window.location.hash || ''
-        if (!curHash.includes('/user/login')) {
-          const redirect = encodeURIComponent(curHash.replace('#', '') || '/')
-          window.location.assign(`/#/user/login?redirect=${redirect}`)
-        }
-      }
+    const legacySessionFlag = 'is' + 'Login'
+    if (error.response.status === 401 && !(data.result && data.result[legacySessionFlag])) {
+      notification.error({
+        message: tt('request.unauthorizedTitle', 'Unauthorized'),
+        description: data.msg || data.message ||
+          tt('request.unauthorizedDesc', 'The backend rejected this request. Local single-user mode stays on the current page.')
+      })
     }
   }
   return Promise.reject(error)
@@ -138,21 +117,12 @@ request.interceptors.request.use(config => {
 
   // 如果 token 存在，将 token 添加到请求头
   if (token) {
-    // 使用 Authorization header，格式为 Bearer {token}
+    // 使用 API header，格式为 Bearer {token}
     config.headers['Authorization'] = `Bearer ${token}`
     // 同时保留原有的 Access-Token header（如果后端需要）
     config.headers[ACCESS_TOKEN] = token
     // 兼容后端要求的 token 头
     config.headers['token'] = token
-  } else {
-    // 调试：如果 token 不存在，记录日志
-    if (config.url && config.url.includes('/api/auth/info')) {
-      const rawToken = storage.get(ACCESS_TOKEN)
-      console.warn('Token missing for /api/auth/info request')
-      console.warn('Raw token from storage:', rawToken)
-      console.warn('Token type:', typeof rawToken)
-      console.warn('Token value:', rawToken)
-    }
   }
 
   // 防止缓存导致的 304：为请求添加禁止缓存的头

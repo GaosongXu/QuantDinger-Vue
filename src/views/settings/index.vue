@@ -535,7 +535,6 @@ export default {
         contact: 'customer-service',
         social: 'team',
         legal: 'safety-certificate',
-        auth: 'lock',
         email: 'mail',
         sms: 'phone',
         network: 'global',
@@ -544,9 +543,7 @@ export default {
         trading: 'stock',
         data_source: 'database',
         search: 'search',
-        agent: 'experiment',
-        security: 'safety',
-        billing: 'dollar'
+        agent: 'experiment'
       }
       return icons[groupKey] || 'setting'
     },

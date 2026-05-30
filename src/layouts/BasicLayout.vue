@@ -31,7 +31,7 @@
       <!-- 用户协议弹窗 -->
       <a-modal :visible="showLegalModal" :footer="null" :title="$t('menu.footer.userAgreement')" @cancel="showLegalModal = false" :width="800">
         <div style="max-height: 60vh; overflow: auto; white-space: pre-wrap; line-height: 1.8; padding: 16px;">
-          {{ menuFooterConfig.legal.user_agreement_text || $t('user.login.legal.content') }}
+          {{ legalAgreementText }}
         </div>
         <div style="margin-top: 12px; text-align: right;">
           <a-button type="primary" @click="showLegalModal = false">OK</a-button>
@@ -41,7 +41,7 @@
       <!-- 隐私条例弹窗 -->
       <a-modal :visible="showPrivacyModal" :footer="null" :title="$t('menu.footer.privacyPolicy')" @cancel="showPrivacyModal = false" :width="800">
         <div style="max-height: 60vh; overflow: auto; white-space: pre-wrap; line-height: 1.8; padding: 16px;">
-          {{ menuFooterConfig.legal.privacy_policy_text || $t('user.login.privacy.content') }}
+          {{ privacyPolicyText }}
         </div>
         <div style="margin-top: 12px; text-align: right;">
           <a-button type="primary" @click="showPrivacyModal = false">OK</a-button>
@@ -249,6 +249,12 @@ export default {
     },
     collapsedLogo () {
       return (this.brandConfig.logos && this.brandConfig.logos.collapsed) || slogoImg
+    },
+    legalAgreementText () {
+      return (this.menuFooterConfig.legal && this.menuFooterConfig.legal.user_agreement_text) || 'User agreement content unavailable.'
+    },
+    privacyPolicyText () {
+      return (this.menuFooterConfig.legal && this.menuFooterConfig.legal.privacy_policy_text) || 'Privacy policy content unavailable.'
     }
   },
   created () {

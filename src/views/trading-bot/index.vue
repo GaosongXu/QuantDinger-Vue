@@ -120,7 +120,7 @@
 <script>
 import { baseMixin } from '@/store/app-mixin'
 import { getStrategyList, startStrategy, stopStrategy, deleteStrategy, createStrategy } from '@/api/strategy'
-import { getUserInfo } from '@/api/login'
+import { getUserInfo } from '@/api/local-user'
 import BotTypeCards from './components/BotTypeCards.vue'
 import BotCreateWizard from './components/BotCreateWizard.vue'
 import BotList from './components/BotList.vue'

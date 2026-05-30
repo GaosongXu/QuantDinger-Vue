@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { UserLayout, BasicLayout, BlankLayout } from '@/layouts'
+import { BasicLayout } from '@/layouts'
 
 export const asyncRouterMap = [
   {
@@ -140,34 +140,6 @@ export const asyncRouterMap = [
         hidden: true,
         meta: { title: 'menu.dashboard.portfolio', keepAlive: true, icon: 'fund', permission: ['dashboard'] }
       },
-      // 个人中心
-      {
-        path: '/profile',
-        name: 'Profile',
-        component: () => import('@/views/profile'),
-        meta: { title: 'menu.myProfile', keepAlive: false, icon: 'user', permission: ['dashboard'] }
-      },
-      // 会员/充值
-      {
-        path: '/billing',
-        name: 'Billing',
-        component: () => import('@/views/billing'),
-        meta: { title: 'menu.billing', keepAlive: false, icon: 'wallet', permission: ['dashboard'] }
-      },
-      // 用户管理 (admin only)
-      {
-        path: '/user-manage',
-        name: 'UserManage',
-        component: () => import('@/views/user-manage'),
-        meta: { title: 'menu.userManage', keepAlive: false, icon: 'team', permission: ['admin'] }
-      },
-      // Agent Tokens (admin only) — issue/revoke tokens for AI agents and view audit log
-      {
-        path: '/agent-tokens',
-        name: 'AgentTokens',
-        component: () => import('@/views/agent-tokens'),
-        meta: { title: 'menu.agentTokens', keepAlive: false, icon: 'api', permission: ['admin'] }
-      },
       // 系统设置 (admin only) - 放在最后
       {
         path: '/settings',
@@ -252,20 +224,6 @@ export const asyncRouterMap = [
  * @type { *[] }
  */
 export const constantRouterMap = [
-  {
-    path: '/user',
-    component: UserLayout,
-    redirect: '/user/login',
-    hidden: true,
-    children: [
-      {
-        path: 'login',
-        name: 'login',
-        component: () => import(/* webpackChunkName: "user" */ '@/views/user/Login')
-      }
-    ]
-  },
-
   {
     path: '/404',
     component: () => import(/* webpackChunkName: "fail" */ '@/views/exception/404')

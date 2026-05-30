@@ -35,7 +35,7 @@ export default function Initializer () {
   store.dispatch('setLang', storage.get(APP_LANGUAGE, 'en-US'))
 
   // Fire-and-forget: pull brand / legal / contact config from backend so the
-  // sidebar footer, login page, version label and legal modals reflect the
+  // sidebar footer, version label and legal modals reflect the
   // current deployment.  Errors are swallowed inside the action and we fall
   // back to the cached / default brand values, so this can never block boot.
   store.dispatch('LoadBrandConfig').catch(() => {})

@@ -1532,7 +1532,7 @@ import { baseMixin } from '@/store/app-mixin'
 import request from '@/utils/request'
 import { formatBacktestTime } from '@/utils/userTime'
 import { resolveExperimentIndicatorParams } from '@/utils/experimentOverrides'
-import { getUserInfo } from '@/api/login'
+import { getUserInfo } from '@/api/local-user'
 import { getWatchlist, addWatchlist, searchSymbols } from '@/api/market'
 import KlineChart from '@/views/indicator-analysis/components/KlineChart.vue'
 import BacktestHistoryDrawer from '@/views/indicator-analysis/components/BacktestHistoryDrawer.vue'
@@ -3372,7 +3372,7 @@ export default {
         includeBaseline: true
       }
     },
-    _authTokenForFetch () {
+    _apiTokenForFetch () {
       let token = storage.get(ACCESS_TOKEN)
       if (token && typeof token === 'object') {
         token = token.token || token.value || ''
@@ -3431,7 +3431,7 @@ export default {
      * 使用 SSE（/api/experiment/ai-optimize）流式更新轮次与回测进度；避免 sync 接口长时间无响应导致 UI 卡在 0/3。
      */
     async streamAiOptimizeWithSse (payload, signal) {
-      const token = this._authTokenForFetch()
+      const token = this._apiTokenForFetch()
       const lang = storage.get('lang') || 'en-US'
       const response = await fetch('/api/experiment/ai-optimize', {
         method: 'POST',
@@ -4654,7 +4654,7 @@ export default {
     },
     async handleCreateIndicator () {
       if (!this.userId) {
-        this.$message.error(this.$t('dashboard.indicator.error.pleaseLogin'))
+        this.$message.error(this.$t('dashboard.indicator.error.needLocalSession'))
         return
       }
       const proceed = () => this._createIndicatorInIde()

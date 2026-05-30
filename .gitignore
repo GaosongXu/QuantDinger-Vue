@@ -1,10 +1,22 @@
 .DS_Store
 node_modules
 /dist
+
+# Build/cache artifacts
+.vite/
+.cache/
+coverage/
+.nyc_output/
+.eslintcache
+.stylelintcache
+pnpm-debug.log*
+*.tsbuildinfo
 # local env files
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
 
 # Log files
 npm-debug.log*

@@ -14,7 +14,7 @@ const permission = {
       state.addRouters = routers
       state.routers = constantRouterMap.concat(routers)
     },
-    // Reset routers to force regeneration (used on login/logout)
+    // Reset routers to force regeneration after local route changes
     RESET_ROUTERS: (state) => {
       state.addRouters = []
       state.routers = constantRouterMap

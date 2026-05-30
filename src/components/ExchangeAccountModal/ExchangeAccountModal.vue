@@ -533,7 +533,7 @@ export default {
 </script>
 
 <style lang="less">
-/* 弹窗挂载在 body，须非 scoped；与个人中心一致，保证闪电交易等页打开也有样式 */
+/* 弹窗挂载在 body，须非 scoped；保证闪电交易等页打开也有样式 */
 @exchange-dark-bg: #1c1c1c;
 @exchange-dark-border: #2a2a2a;
 @exchange-dark-input: #141414;

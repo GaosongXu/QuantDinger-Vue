@@ -1,6 +1,4 @@
 import { asyncRouterMap } from '@/config/router.config'
-import storage from 'store'
-import { USER_INFO, USER_ROLES } from '@/store/mutation-types'
 
 /**
  * Filter routes based on user permissions.
@@ -38,39 +36,21 @@ function filterRoutesByPermission (routes, isAdmin) {
 }
 
 /**
- * Check if current user is admin.
- * Checks both userInfo.role and stored roles array.
+ * Check if local operator can access admin screens.
  *
  * @returns {boolean} True if user is admin
  */
 function checkIsAdmin () {
-  // Check userInfo.role first
-  const userInfo = storage.get(USER_INFO) || {}
-  if (userInfo.role) {
-    const roleId = typeof userInfo.role === 'string' ? userInfo.role : userInfo.role.id
-    if (roleId === 'admin') {
-      return true
-    }
-  }
-
-  // Check stored roles array
-  const roles = storage.get(USER_ROLES) || []
-  if (Array.isArray(roles)) {
-    for (const role of roles) {
-      if (role && (role.id === 'admin' || role === 'admin')) {
-        return true
-      }
-    }
-  }
-
-  return false
+  // Local single-user mode always exposes admin-only operational screens
+  // such as Settings. There are no app accounts or role gates.
+  return true
 }
 
 /**
- * Generate dynamic routes based on user permissions.
- * Filters admin-only routes for non-admin users.
+ * Generate dynamic routes for the local operator.
+ * Admin-only routes remain available in account-free mode.
  *
- * @param {string} token - User token (unused, kept for compatibility)
+ * @param {string} token - Local route token (unused, kept for compatibility)
  * @returns {Promise<Array>} Promise resolving to filtered routes
  */
 export const generatorDynamicRouter = token => {

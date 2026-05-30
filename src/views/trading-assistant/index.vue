@@ -1239,10 +1239,7 @@
                           class="section-inline-alert">
                           <template #message>
                             <span>
-                              {{ $t('trading-assistant.form.notificationConfigMissing', { channels: unconfiguredChannels.join(', ') }) }}
-                              <router-link to="/profile" style="margin-left: 8px">
-                                <a-icon type="setting" /> {{ $t('trading-assistant.form.goToProfile') }}
-                              </router-link>
+                              所选通知渠道需要后端通知服务配置；浏览器通知无需账号配置。
                             </span>
                           </template>
                         </a-alert>
@@ -1254,10 +1251,7 @@
                           class="section-inline-alert">
                           <template #message>
                             <span>
-                              {{ $t('trading-assistant.form.notificationFromProfile') }}
-                              <router-link to="/profile" style="margin-left: 8px">
-                                <a-icon type="setting" /> {{ $t('trading-assistant.form.goToProfile') }}
-                              </router-link>
+                              通知渠道使用本地默认配置；浏览器通知无需账号配置。
                             </span>
                           </template>
                         </a-alert>
@@ -1302,8 +1296,8 @@
                             <a-icon type="plus-circle" /> {{ $t('quickTrade.addAccountInline') }}
                           </a-button>
                           <span class="ta-credential-actions-sep">·</span>
-                          <router-link to="/profile?tab=exchange">
-                            <a-icon type="setting" style="margin-right: 4px;" />{{ $t('profile.exchange.goToManage') }}
+                          <router-link to="/broker-accounts">
+                            <a-icon type="setting" style="margin-right: 4px;" />{{ $t('menu.dashboard.brokerAccounts') }}
                           </router-link>
                         </div>
                         <a-alert
@@ -4289,7 +4283,7 @@ export default {
                 const totalCreated = res.data?.total_created || this.selectedSymbols.length
                 this.$message.success(this.$t('trading-assistant.messages.batchCreateSuccess', { count: totalCreated }))
               }
-              // Credentials are managed in Profile → Exchange Config; no inline save needed.
+              // Credentials are managed on the Broker Accounts page; no inline save needed.
               this.handleRefresh()
             } else {
               this.$message.error(res.msg || (this.isEditMode ? this.$t('trading-assistant.messages.updateFailed') : this.$t('trading-assistant.messages.createFailed')))

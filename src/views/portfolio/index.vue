@@ -727,10 +727,7 @@
         >
           <template #message>
             <span>
-              {{ $t('portfolio.form.notificationFromProfile') }}
-              <router-link to="/profile" style="margin-left: 8px">
-                <a-icon type="setting" /> {{ $t('portfolio.form.goToProfile') }}
-              </router-link>
+              通知渠道使用本地默认配置；浏览器通知无需账号配置。
             </span>
           </template>
         </a-alert>
@@ -806,10 +803,7 @@
         >
           <template #message>
             <span>
-              {{ $t('portfolio.form.notificationFromProfile') }}
-              <router-link to="/profile" style="margin-left: 8px">
-                <a-icon type="setting" /> {{ $t('portfolio.form.goToProfile') }}
-              </router-link>
+              通知渠道使用本地默认配置；浏览器通知无需账号配置。
             </span>
           </template>
         </a-alert>
@@ -1392,7 +1386,7 @@ export default {
         if (err) return
         this.savingAlert = true
         try {
-          // 构建通知目标 - 使用用户在个人中心配置的值
+          // 构建通知目标 - 使用本地默认通知配置
           const targets = {}
           if (this.alertChannels.includes('telegram') && this.userNotificationSettings.telegram_chat_id) {
             targets.telegram = this.userNotificationSettings.telegram_chat_id
